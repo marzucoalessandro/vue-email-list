@@ -15,24 +15,21 @@
 let app = new Vue({
   el: "#root",
   data: {
-    myMail: ""
+    myMail: []
   },
 
-// cicliamo il mounted 10 vlt per fare la richiesta delle mail;
+// cicliamo nel mounted 10 vlt per fare la richiesta delle mail;
   mounted(){
+
     for (var i = 0; i < 10; i++) {
       axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
-      .then(function (response){
+      .then(response => {
         // console.log(response.data.response);
         let newMail = response.data.response;
-        let myArray = [];
-        myArray.push(newMail)
-        console.log(myArray);
+        this.myMail.push(newMail)
+        console.log(this.myMail);
 
-
-    })
-
-
+      })
     };
   },
 
