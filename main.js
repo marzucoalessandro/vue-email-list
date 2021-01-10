@@ -15,8 +15,9 @@
 let app = new Vue({
   el: "#root",
   data: {
-    myMail: []
+    myMail: [],
   },
+
 
 // cicliamo nel mounted 10 vlt per fare la richiesta delle mail;
   mounted(){

@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root{
+  width: 600px;
+  height: 600px;
+  background-color: grey;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+.result{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yellow{
+  background-color: yellow;
+}
+.green{
+  background-color: lightgreen;
+}
