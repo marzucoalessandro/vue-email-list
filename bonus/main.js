@@ -4,7 +4,6 @@
 // Il numero ottenuto appare al centro del quadrato
 
 // creiamo l'istanza di vue
-
 let app = new Vue({
   el: "#root",
 
@@ -19,17 +18,17 @@ let app = new Vue({
     myNumber: "",
     counter: 36
   },
-  mounted() {
-    axios.get("https://flynn.boolean.careers/exercises/api/random/int")
-    .then(response =>{
-      let number = response.data.response;
-      console.log(response.data.response);
-      this.myNumber = number;
-    })
-  },
+
   methods: {
-    displayNumber(){
-      return this.myNumber
+    getNumber(){
+      axios.get("https://flynn.boolean.careers/exercises/api/random/int")
+      .then(response =>{
+        let number = response.data.response;
+        console.log(response.data.response);
+        this.myNumber = number
+
+      })
+
     }
   }
-})
+});
